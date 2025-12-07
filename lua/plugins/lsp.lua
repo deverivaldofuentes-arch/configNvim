@@ -1,9 +1,9 @@
--- Si no existe plugins/lsp.lua, créalo. Si existe, agrega esto:
 return {
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        -- Configuración para gopls
         gopls = {
           settings = {
             gopls = {
@@ -31,26 +31,28 @@ return {
             },
           },
         },
-      },
-      setup = {
-        gopls = function(_, opts)
-          -- Workaround for gopls not supporting semanticTokens
-          require("lazyvim.util").lsp.on_attach(function(client, _)
-            if client.name == "gopls" then
-              if not client.server_capabilities.semanticTokensProvider then
-                local semantic = client.config.capabilities.textDocument.semanticTokens
-                client.server_capabilities.semanticTokensProvider = {
-                  full = true,
-                  legend = {
-                    tokenTypes = semantic.tokenTypes,
-                    tokenModifiers = semantic.tokenModifiers,
-                  },
-                  range = true,
-                }
-              end
-            end
-          end)
-        end,
+        -- Servidores para desarrollo web
+        html = {
+          filetypes = { "html", "htmldjango" },
+        },
+        cssls = {},
+        tsserver = {},
+        emmet_ls = {
+          filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "htmldjango" },
+        },
+        tailwindcss = {
+          filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "htmldjango" },
+          init_options = {
+            userLanguages = {
+              html = "html",
+              css = "css",
+              javascript = "javascript",
+              javascriptreact = "javascriptreact",
+              typescript = "typescript",
+              typescriptreact = "typescriptreact",
+            },
+          },
+        },
       },
     },
   },

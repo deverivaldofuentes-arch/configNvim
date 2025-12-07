@@ -16,7 +16,7 @@ return {
       vim.g.go_highlight_interfaces = true
       vim.g.go_highlight_operators = true
       vim.g.go_highlight_build_constraints = true
-      vim.g.go_fmt_command = "goimports" -- Usa goimports en vez de gofmt
+      vim.g.go_fmt_command = "goimports"
       vim.g.go_fmt_autosave = 1
       vim.g.go_imports_autosave = 1
       vim.g.go_mod_fmt_autosave = 1
@@ -25,6 +25,10 @@ return {
       -- Mejorar la experiencia de testing
       vim.g.go_test_timeout = "10s"
       vim.g.go_test_show_name = 1
+
+      -- Navegación y documentación
+      vim.g.go_doc_keywordprg_enabled = 1
+      vim.g.go_def_mapping_enabled = 0 -- Usaremos LSP para esto
     end,
   },
   {
@@ -33,13 +37,30 @@ return {
     dependencies = "mfussenegger/nvim-dap",
     config = function(_, opts)
       require("dap-go").setup({
-        -- Configuración mejorada para debugging
         delve = {
           path = "dlv",
           initialize_timeout_sec = 20,
           launch_timeout_sec = 20,
         },
       })
+    end,
+  },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup({
+        commands = {
+          go = "go",
+          gomodifytags = "gomodifytags",
+          gotests = "gotests",
+          impl = "impl",
+          iferr = "iferr",
+        },
+      })
+    end,
+    build = function()
+      vim.cmd([[silent! GoInstallDeps]])
     end,
   },
 }
