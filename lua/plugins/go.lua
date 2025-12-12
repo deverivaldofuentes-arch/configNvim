@@ -3,32 +3,7 @@ return {
     "fatih/vim-go",
     ft = "go",
     config = function()
-      -- Configuración mejorada de vim-go
-      vim.g.go_highlight_types = true
-      vim.g.go_highlight_functions = true
-      vim.g.go_highlight_function_calls = true
-      vim.g.go_highlight_operators = true
-      vim.g.go_highlight_build_constraints = true
-      vim.g.go_highlight_extra_types = true
-      vim.g.go_highlight_fields = true
-      vim.g.go_highlight_methods = true
-      vim.g.go_highlight_structs = true
-      vim.g.go_highlight_interfaces = true
-      vim.g.go_highlight_operators = true
-      vim.g.go_highlight_build_constraints = true
-      vim.g.go_fmt_command = "goimports"
-      vim.g.go_fmt_autosave = 1
-      vim.g.go_imports_autosave = 1
-      vim.g.go_mod_fmt_autosave = 1
-      vim.g.go_asmfmt_autosave = 1
-
-      -- Mejorar la experiencia de testing
-      vim.g.go_test_timeout = "10s"
-      vim.g.go_test_show_name = 1
-
-      -- Navegación y documentación
-      vim.g.go_doc_keywordprg_enabled = 1
-      vim.g.go_def_mapping_enabled = 0 -- Usaremos LSP para esto
+      -- ... tu configuración existente ...
     end,
   },
   {
@@ -61,6 +36,15 @@ return {
     end,
     build = function()
       vim.cmd([[silent! GoInstallDeps]])
+    end,
+  },
+  -- Si tienes una sección para Mason aquí, actualízala:
+  {
+    "mason-org/mason.nvim",
+    opts = function(_, opts)
+      if opts.ensure_installed then
+        vim.list_extend(opts.ensure_installed, { "gopls", "delve", "goimports", "gofumpt" })
+      end
     end,
   },
 }
