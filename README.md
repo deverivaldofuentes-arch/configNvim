@@ -337,7 +337,7 @@ Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
 ## 👤 Autor
 
 **Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- GitHub: [@Dev Erivaldo](https://github.com/deverivaldofuentes-arch)
 
 ## 🙏 Agradecimientos
 
