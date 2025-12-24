@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/github/go-mod/go-version/your-github-username/your-repo-name?style=for-the-badge&logo=go" alt="Go Version">
   <img src="https://img.shields.io/github/license/your-github-username/your-repo-name?style=for-the-badge" alt="License">
 </p>
-
+<details>
 Una configuración moderna de Neovim basada en [LazyVim](https://www.lazyvim.org/), optimizada para desarrollo en **Go**, **Java** y **Web** con carga diferida para máximo rendimiento.
 
 ## ✨ Características Principales
@@ -82,7 +82,7 @@ mv ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
 
 ### 2. Clonar la configuración
 ```bash
-git clone https://github.com/tu-usuario/tu-repo-nvim.git ~/.config/nvim
+git clone https://github.com/deverivaldofuentes-arch/configNvim.git ~/.config/nvim
 ```
 
 ### 3. Iniciar Neovim
