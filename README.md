@@ -1,20 +1,6 @@
 ```markdown
 # 🚀 Neovim Configuration - LazyVim Based Setup
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Neovim-0.9+-green.svg?style=for-the-badge&logo=neovim" alt="Neovim Version">
-  
-  <img src="https://img.shields.io/badge/Lua-JIT-purple.svg?style=for-the-badge&logo=lua" alt="Lua JIT">
-  
-  <a href="https://www.lazyvim.org/">
-    <img src="https://img.shields.io/badge/LazyVim-Config-blue.svg?style=for-the-badge" alt="LazyVim">
-  </a>
-
-  <img src="https://img.shields.io/github/go-mod/go-version/deverivaldofuentes-arch/configNvim?style=for-the-badge&logo=go" alt="Go Version">
-
-  <img src="https://img.shields.io/github/license/deverivaldofuentes-arch/configNvim?style=for-the-badge&color=yellow" alt="License">
-</p>
-
 Una configuración moderna de Neovim basada en [LazyVim](https://www.lazyvim.org/), optimizada para desarrollo
 en **Go**, **Java** y **Web** con carga diferida para máximo rendimiento.
 
@@ -338,16 +324,6 @@ nvim +Lazy update
 - [Mason.nvim](https://github.com/williamboman/mason.nvim)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas!
-
-1. **Fork** el proyecto
-2. Crea una **rama** (`git checkout -b feature/AmazingFeature`)
-3. **Commit** cambios (`git commit -m 'Add AmazingFeature'`)
-4. **Push** a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un **Pull Request**
-
 ### Guía de Estilo
 - Usa **Lua** para nuevas configuraciones
 - Mantén la **estructura modular**
@@ -362,7 +338,6 @@ Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
 
 **Tu Nombre**
 - GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- Twitter: [@tu-twitter](https://twitter.com/tu-twitter)
 
 ## 🙏 Agradecimientos
 
