@@ -3,13 +3,20 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Neovim-0.9+-green.svg?style=for-the-badge&logo=neovim" alt="Neovim Version">
+  
   <img src="https://img.shields.io/badge/Lua-JIT-purple.svg?style=for-the-badge&logo=lua" alt="Lua JIT">
-  <img src="https://img.shields.io/badge/LazyVim-Config-blue.svg?style=for-the-badge" alt="LazyVim">
-  <img src="https://img.shields.io/github/go-mod/go-version/your-github-username/your-repo-name?style=for-the-badge&logo=go" alt="Go Version">
-  <img src="https://img.shields.io/github/license/your-github-username/your-repo-name?style=for-the-badge" alt="License">
+  
+  <a href="https://www.lazyvim.org/">
+    <img src="https://img.shields.io/badge/LazyVim-Config-blue.svg?style=for-the-badge" alt="LazyVim">
+  </a>
+
+  <img src="https://img.shields.io/github/go-mod/go-version/deverivaldofuentes-arch/configNvim?style=for-the-badge&logo=go" alt="Go Version">
+
+  <img src="https://img.shields.io/github/license/deverivaldofuentes-arch/configNvim?style=for-the-badge&color=yellow" alt="License">
 </p>
-<details>
-Una configuración moderna de Neovim basada en [LazyVim](https://www.lazyvim.org/), optimizada para desarrollo en **Go**, **Java** y **Web** con carga diferida para máximo rendimiento.
+
+Una configuración moderna de Neovim basada en [LazyVim](https://www.lazyvim.org/), optimizada para desarrollo
+en **Go**, **Java** y **Web** con carga diferida para máximo rendimiento.
 
 ## ✨ Características Principales
 
