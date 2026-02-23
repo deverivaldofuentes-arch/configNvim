@@ -20,7 +20,7 @@ return {
         "java-test",
         "intelephense",
         "php-cs-fixer",
-        "blade-formaterr",
+        "blade-formatter",
         -- install formatters
         "stylua",
         "csharpier",

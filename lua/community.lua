@@ -10,7 +10,7 @@ return {
   -- Importa el pack de C# (LSP, resaltado y depuración básica)
   { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.java" },
-  { impot = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.php" },
   -- import/override with your plugins folder
 
   { import = "astrocommunity.pack.html-css" },
