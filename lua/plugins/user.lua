@@ -17,6 +17,33 @@ return {
     },
   },
 
+  -- Optimización de nvim-cmp (Autocompletado) para hardware modesto:
+  -- Reducimos los tiempos de espera y limitamos fuentes lentas para que el menú
+  -- de sugerencias se sienta instantáneo.
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      opts.performance = {
+        debounce = 20,          -- (Por defecto 60) Espera menos tiempo al teclear antes de buscar sugerencias
+        throttle = 10,          -- (Por defecto 30) Frecuencia de actualización más agresiva
+        fetching_timeout = 200, -- (Por defecto 500) Si el LSP tarda más de 200ms, muestra lo que tenga y cancela la espera para no trabar el editor
+      }
+
+      -- Limitar cuántas sugerencias se muestran a la vez ahorra muchísimo renderizado
+      if not opts.window then opts.window = {} end
+      opts.window.completion = require("cmp").config.window.bordered({
+        max_height = 10,      -- Mostrar solo 10 sugerencias a la vez (menos uso de CPU al mover la lista)
+        max_width = 50,       -- Evitar que las cajas de sugerencias sean gigantes
+      })
+      opts.window.documentation = require("cmp").config.window.bordered({
+        max_height = 10,
+        max_width = 50,
+      })
+
+      return opts
+    end,
+  },
+
   -- "andweeb/presence.nvim", -- Disabled for performance
   -- {
   --   "ray-x/lsp_signature.nvim",

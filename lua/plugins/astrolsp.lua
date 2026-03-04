@@ -105,6 +105,15 @@ return {
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
+
+      -- OPTIMIZACIÓN EXTREMA DE RENDIMIENTO:
+      -- Deshabilitar la observación de archivos del espacio de trabajo (File Watching).
+      -- En proyectos grandes (node_modules, vendor) esto colapsa la RAM y la CPU del PC.
+      client.server_capabilities.workspace = {
+        didChangeWatchedFiles = {
+          dynamicRegistration = false,
+        },
+      }
     end,
   },
 }

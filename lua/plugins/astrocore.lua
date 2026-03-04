@@ -19,8 +19,10 @@ return {
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = true,
+      virtual_text = false,        -- Apagar el texto virtual en línea ahorra mucho renderizado
       underline = true,
+      update_in_insert = false,    -- ¡CLAVE! No calcular errores MIENTRAS escribes (solo al pausar/salir del modo insertar)
+      severity_sort = true,        -- Ordenar errores por gravedad (no afecta rendimiento, mejora UX)
     },
     -- passed to `vim.filetype.add`
     filetypes = {
