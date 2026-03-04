@@ -6,47 +6,48 @@
 return {
 
   -- == Examples of Adding Plugins ==
-  {
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-    opts = {
-      extra_groups = {
-        "Normal",
-        "NormalNC",
-        "NormalFloat",
-        "FloatBorder",
-        "TelescopeNormal",
-        "TelescopeBorder",
-        "TelescopePromptNormal",
-        "TelescopePromptBorder",
-        "TelescopeResultsBorder",
-        "LineNr",
-        "SignColumn",
-        "EndOfBuffer",
-        "Pmenu",
-        "PmenuSel",
-        "PmenuSbar",
-        "PmenuThumb",
-        "LspInfoBorder",
-        "WhichKeyFloat",
-        "NotifyBackground",
-        "NoiceCmdlinePopup",
-        "NoiceCmdlinePopupBorder",
-        "NeoTreeNormal",
-        "NeoTreeNormalNC",
-        "NeoTreeEndOfBuffer",
-        "WinSeparator",
-        "VertSplit",
-      },
-      exclude_groups = {
-        "CursorLine",
-        "ColorColumn",
-        "Visual",
-        "Search",
-        "IncSearch",
-      },
-    },
-  },
+  -- Se comenta temporalmente transparent.nvim para evitar repintados y mejorar rendimiento
+  -- {
+  --   "xiyaowong/transparent.nvim",
+  --   lazy = false,
+  --   opts = {
+  --     extra_groups = {
+  --       "Normal",
+  --       "NormalNC",
+  --       "NormalFloat",
+  --       "FloatBorder",
+  --       "TelescopeNormal",
+  --       "TelescopeBorder",
+  --       "TelescopePromptNormal",
+  --       "TelescopePromptBorder",
+  --       "TelescopeResultsBorder",
+  --       "LineNr",
+  --       "SignColumn",
+  --       "EndOfBuffer",
+  --       "Pmenu",
+  --       "PmenuSel",
+  --       "PmenuSbar",
+  --       "PmenuThumb",
+  --       "LspInfoBorder",
+  --       "WhichKeyFloat",
+  --       "NotifyBackground",
+  --       "NoiceCmdlinePopup",
+  --       "NoiceCmdlinePopupBorder",
+  --       "NeoTreeNormal",
+  --       "NeoTreeNormalNC",
+  --       "NeoTreeEndOfBuffer",
+  --       "WinSeparator",
+  --       "VertSplit",
+  --     },
+  --     exclude_groups = {
+  --       "CursorLine",
+  --       "ColorColumn",
+  --       "Visual",
+  --       "Search",
+  --       "IncSearch",
+  --     },
+  --   },
+  -- },
 
   {
     "dgox16/oldworld.nvim",
@@ -93,6 +94,11 @@ return {
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
+  
+  -- Opcional: desactivar which-key o snacks (dashboard) si no son prioritarios
+  -- { "folke/which-key.nvim", enabled = false },   -- Descomentar si prefieres prescindir de él
+  -- { "folke/snacks.nvim", enabled = false },      -- Descomentar si el dashboard no es prioritario
+
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {

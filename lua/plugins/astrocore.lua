@@ -43,6 +43,17 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        -- Opciones globales para mejorar el rendimiento:
+        lazyredraw = true,        -- Evita redibujar durante macros/comandos
+        synmaxcol = 200,          -- Limita coloreado sintáctico a 200 columnas
+        updatetime = 300,         -- Reduce tiempo de actualización (por defecto 4000)
+        redrawtime = 1500,        -- Tiempo máximo para dibujar la pantalla
+        timeoutlen = 500,         -- Tiempo para key mappings
+        ttimeoutlen = 10,         -- Tiempo para secuencias de teclas
+        belloff = "all",          -- Desactiva la campana
+        visualbell = true,        -- Usa parpadeo visual en lugar de sonido
+        showmode = false,         -- La barra de estado ya lo muestra
+        showcmd = false,          -- Ídem
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

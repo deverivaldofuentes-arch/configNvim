@@ -8,11 +8,11 @@ return {
   { import = "astrocommunity.pack.lua" },
 
   -- Importa el pack de C# (LSP, resaltado y depuración básica)
-  { import = "astrocommunity.pack.cs" },
-  { import = "astrocommunity.pack.java" },
-  { import = "astrocommunity.pack.php" },
+  -- { import = "astrocommunity.pack.cs" },      -- Comentado si no usas C#
+  -- { import = "astrocommunity.pack.java" },    -- Comentado si no usas Java
+  -- { import = "astrocommunity.pack.php" },     -- Comentado si no usas PHP
   -- import/override with your plugins folder
 
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.tailwindcss" },
+  -- { import = "astrocommunity.pack.tailwindcss" }, -- Comentado si no usas Tailwind
 }

@@ -11,25 +11,25 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
-        "omnisharp",
+        -- "omnisharp",            -- Solo si no viene con el pack de C#
         "html-lsp",
         "css-lsp",
         "emmet-ls",
-        "jdtls",
-        "java-debug-adapter",
-        "java-test",
-        "intelephense",
-        "php-cs-fixer",
-        "blade-formatter",
+        -- "jdtls",                -- Comentado si no usas Java
+        -- "java-debug-adapter",   -- Comentado si no usas Java
+        -- "java-test",            -- Comentado si no usas Java
+        -- "intelephense",         -- Comentado si no usas PHP
+        -- "php-cs-fixer",         -- Comentado si no usas PHP
+        -- "blade-formatter",      -- Comentado si no usas PHP
         -- install formatters
         "stylua",
-        "csharpier",
+        -- "csharpier",            -- Solo si formateas C#
         "prettier",
 
         -- install debuggers
-        "netcoredbg",
+        -- "netcoredbg",           -- Solo si depuras C#
         -- install any other package
-        "tree-sitter-cli",
+        -- "tree-sitter-cli",      -- no es necesario según recomendación
       },
     },
   },
