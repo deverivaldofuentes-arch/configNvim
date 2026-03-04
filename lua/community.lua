@@ -8,7 +8,7 @@ return {
   { import = "astrocommunity.pack.lua" },
 
   -- Importa el pack de C# (LSP, resaltado y depuración básica)
-  -- { import = "astrocommunity.pack.cs" },      -- Comentado si no usas C#
+  { import = "astrocommunity.pack.cs" },      -- Habilitado para .NET / Avalonia
   -- { import = "astrocommunity.pack.java" },    -- Comentado si no usas Java
   -- { import = "astrocommunity.pack.php" },     -- Comentado si no usas PHP
   -- import/override with your plugins folder

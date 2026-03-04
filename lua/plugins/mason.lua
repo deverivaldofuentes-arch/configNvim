@@ -11,7 +11,7 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
-        -- "omnisharp",            -- Solo si no viene con el pack de C#
+        "omnisharp",            -- Necesario para backend de C# / .NET
         "html-lsp",
         "css-lsp",
         "emmet-ls",
@@ -23,11 +23,11 @@ return {
         -- "blade-formatter",      -- Comentado si no usas PHP
         -- install formatters
         "stylua",
-        -- "csharpier",            -- Solo si formateas C#
+        "csharpier",            -- Formateador estándar para C#
         "prettier",
 
         -- install debuggers
-        -- "netcoredbg",           -- Solo si depuras C#
+        "netcoredbg",           -- Depurador para .NET core (indispensable)
         -- install any other package
         -- "tree-sitter-cli",      -- no es necesario según recomendación
       },
